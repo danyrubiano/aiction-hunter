@@ -1,0 +1,9 @@
+gcloud auth configure-docker
+
+docker login gcr.io/aiction-hunter-351600
+
+docker build -t gcr.io/aiction-hunter-351600/app:v0.0.1 .   
+
+docker run --rm -p 8080:8080 gcr.io/aiction-hunter-351600/app:v0.0.1
+
+docker push  gcr.io/aiction-hunter-351600/app:v0.0.1
